@@ -1,0 +1,93 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Adonis Andonie</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        .caja1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: movercaja;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+        }
+        .texto-animado{
+            font-size: 15px;
+            animation-name: cambiarestilo;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            
+        }
+        @keyframes cambiarestilo{
+            0%{
+                font-size: 15px;
+            }
+            50%{
+                font-size: 30px;
+            }
+            100%{
+                font-size: 60px;
+            }
+        }
+        @keyframes movercaja{
+            0%{
+                transform: translateX(0px) translateY(0px); 
+
+            }
+            25%{
+                background-color: blue;
+                transform: translateX(200px) translateY(0px);
+            }
+            50%{
+                background-color: green;
+                transform: translateX(200px) translateY(200px);
+            }
+            75%{
+                background-color: yellow;
+                transform: translateX(0px) translateY(200px);
+            }
+            100%{
+                background-color: red;
+                transform: translateX(0px) translateY(0px);
+            }
+               
+              
+            
+
+        }
+    </style>
+ 
+  </head>
+
+  <body>
+
+    <h1>Animaciones</h1>
+    <div class="caja1">
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h3 class="texto-animado">Este texto va a cambiar</h3>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+  </body>
+
+</html>
