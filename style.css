@@ -1,0 +1,568 @@
+:root {
+    --bluebarfill: linear-gradient(to right, #00C5CC, #0071ae);
+    --bluebarstroke: #00ebe7;
+    --bluebutton: #23ffe5; 
+    --pinkbarfill: linear-gradient(to right, #ff2f8d, #9b0081); 
+    --pinkbarstroke: #ff43ad; 
+    --pinkbutton: #ff55cc; 
+    --goldbarfill: linear-gradient(to right, #e7b615, #ff3f3f); 
+    --goldbarstroke: #ffe32d; 
+    --goldbutton: #f6cc3f; 
+    --greenbarfill: linear-gradient(to right, #00cc63, #007a9b); 
+    --greenbarstroke: #00ebad; 
+    --greenbutton: #02ffab; 
+    --bluetextinput: #0b5f70; 
+    --goldtextinput: #753125; 
+    --pinktextinput: #510b49; 
+    --redbutton: #ed2e47; 
+}
+
+body {
+    background: #032038;
+}
+
+.card-recover {
+    width: 100%;
+    max-width: 340px;
+    background: var(--bluebarfill);
+    border: 5px solid var(--bluebarstroke);
+    border-radius: 36px;
+    padding: 36px 28px 70px;
+    position: relative;
+    
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #032038;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+.recover-container {
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+/* -------------------------
+   Logo
+------------------------- */
+
+.logo {
+    display: block;
+    width: 240px;
+    margin: 25px auto 45px;
+}
+
+/* -------------------------
+   Title Bar
+------------------------- */
+
+.title-bar {
+    background: var(--bluebarfill);
+    border: 4px solid var(--bluebarstroke);
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    font-size: 1.8rem;
+    padding: 10px;
+    margin-bottom: 12px;
+}
+
+/* -------------------------
+   Recover Card
+------------------------- */
+
+.card-recover {
+    width: 100%;
+    max-width: 340px;
+    background: var(--bluebarfill);
+    border: 5px solid var(--bluebarstroke);
+    border-radius: 36px;
+    padding: 36px 28px 70px;
+    position: relative;
+    margin: auto;
+}
+
+/* -------------------------
+   Inputs
+------------------------- */
+
+.input-group {
+    margin-bottom: 24px;
+}
+
+.label-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    display: inline-block;
+    background: var(--bluebutton);
+    color: #064b63;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 1rem;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.25);
+}
+
+.input-group input {
+    width: 100%;
+    height: 55px;
+    border-radius: 28px;
+    border: 4px solid var(--bluebarstroke);
+    background: var(--bluetextinput);
+    color: white;
+    padding: 0 18px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+/* -------------------------
+   Eye Button
+------------------------- */
+
+.eye-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #064b63;
+    display: flex;
+    align-items: center;
+}
+
+.eye-btn iconify-icon {
+    font-size: 28px;
+}
+
+/* -------------------------
+   Confirm Button
+------------------------- */
+
+.confirm-btn {
+    display: block;
+    margin: 30px auto 0;
+    width: 190px;
+    height: 50px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: var(--bluebutton);
+
+    color: #064b63;
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 6px 12px rgba(0,0,0,0.30);
+
+    transition: 0.2s;
+}
+
+.confirm-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* -------------------------
+   Back Button
+------------------------- */
+
+.back-btn {
+    position: absolute;
+
+    right: 12px;
+    bottom: 12px;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: var(--bluebutton);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    color: #064b63;
+    font-size: 1.8rem;
+    font-weight: bold;
+
+    box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+}
+
+body:not(.home-body){
+    margin-top: 9vh;
+    overscroll-behavior-y: auto;
+}
+
+.pull-to-refresh {
+  position:relative;
+  top: -60px;
+  width: 100%;
+  height: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: top 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
+}
+.pull-to-refresh.seen {
+  top: 0 !important; /* Alteracion de posicion */
+  height: 6vh !important; /* Altura de espacio cuando aparece Spinner */
+  transition: height 0.5s ease-in-out; /* Animacion de transicion de la altura modificada */
+}
+
+.fab{
+margin-bottom: 9vh;
+margin-right: 1.5vh;
+display: flex;
+justify-content: end;
+}
+
+/* ===================================
+   Universal Blue Bar
+=================================== */
+
+.blue-bar {
+    background: var(--bluebarfill);
+
+    border: 4px solid var(--bluebarstroke);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 18px rgba(0,0,0,0.35);
+
+    backdrop-filter: blur(4px);
+}
+
+/* ===================================
+   Home Page
+=================================== */
+
+.home-body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Fullscreen Map */
+
+.map-container {
+
+    position: relative;
+
+    width: 100vw;
+    height: 100dvh;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 20, 40, 0.45),
+            rgba(0, 20, 40, 0.45)
+        ),
+        url("img/Drive-Up Map.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.top-ui {
+
+    position: absolute;
+
+    top: 20px;
+    left: 20px;
+    right: 20px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.menu-button {
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+
+    background: var(--bluebarfill);
+
+    border: 4px solid var(--bluebarstroke);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 6px 16px rgba(0,0,0,0.35);
+}
+
+.menu-button iconify-icon {
+
+    color: white;
+    font-size: 34px;
+}
+
+.search-bar {
+
+    flex: 1;
+
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 14px;
+}
+
+.search-bar iconify-icon {
+
+    color: white;
+    font-size: 28px;
+}
+
+.profile-section {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.profile-button {
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+
+    background: var(--bluebarfill);
+
+    border: 4px solid var(--bluebarstroke);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 6px 16px rgba(0,0,0,0.35);
+}
+
+.profile-button iconify-icon {
+
+    color: white;
+    font-size: 34px;
+}
+
+.level-counter {
+
+    min-width: 72px;
+
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.map-marker {
+
+    position: absolute;
+
+    left: 58%;
+    top: 67%;
+
+    transform: translate(-50%, -50%);
+}
+
+.map-marker img {
+
+    width: 48px;
+    height: auto;
+
+    filter:
+        drop-shadow(0 0 12px rgba(0,255,255,0.5));
+}
+
+/* ===================================
+   Bottom Navigation
+=================================== */
+
+.bottom-nav {
+
+    position: absolute;
+
+    bottom: 20px;
+    left: 25px;
+    right: 25px;
+
+    height: 60px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    border-radius: 18px;
+
+    z-index: 100;
+}
+
+.bottom-nav a {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    color: white;
+}
+
+.bottom-nav iconify-icon {
+
+    color: white;
+
+    font-size: 42px;
+
+    width: 42px;
+    height: 42px;
+}
+
+/* ===================================
+   Event Type Screen
+=================================== */
+
+.event-type-container {
+
+    position: absolute;
+
+    top: 35%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 90%;
+
+    max-width: 360px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event-title {
+
+    width: 100%;
+
+    height: 56px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: white;
+
+    font-size: 1.8rem;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 18px;
+}
+
+.event-type-btn {
+
+    width: 85%;
+
+    height: 46px;
+
+    margin-bottom: 10px;
+
+    border: none;
+
+    border-radius: 18px;
+
+    background: var(--bluebutton);
+
+    color: #064b63;
+
+    font-size: 1.2rem;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 14px rgba(0,0,0,0.35);
+
+    transition: transform 0.2s;
+}
+
+.event-type-btn:hover {
+
+    transform: translateY(-2px);
+}
+
+.close-button {
+
+    position: absolute;
+
+    top: 90px;
+
+    right: 28px;
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: var(--redbutton);
+
+    color: white;
+
+    text-decoration: none;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 1.8rem;
+
+    box-shadow:
+        0 6px 14px rgba(0,0,0,0.35);
+
+    z-index: 100;
+}

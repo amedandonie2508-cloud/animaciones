@@ -1,0 +1,225 @@
+:root {
+  --bluebarfill: linear-gradient(to right, #00C5CC, #0071ae);
+  --bluebarstroke: #00ebe7;
+  --bluebutton: #23ffe5; 
+  --pinkbarfill: linear-gradient(to right, #ff2f8d, #9b0081); 
+  --pinkbarstroke: #ff43ad; 
+  --pinkbutton: #ff55cc; 
+  --goldbarfill: linear-gradient(to right, #e7b615, #ff3f3f); 
+  --goldbarstroke: #ffe32d; 
+  --goldbutton: #f6cc3f; 
+  --greenbarfill: linear-gradient(to right, #00cc63, #007a9b); 
+  --greenbarstroke: #00ebad; 
+  --greenbutton: #02ffab; 
+  --bluetextinput: #0b5f70; 
+  --goldtextinput: #753125; 
+  --pinktextinput: #510b49; 
+  --redbutton: #ed2e47; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("img/HomePage.png") no-repeat center center fixed;
+  background-size: 50% 100%;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.contacts-title-box {
+  background: var(--greenbutton);
+  border: 2px solid var(--greenbarstroke);
+  border-radius: 35px;
+  padding: 10px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20 auto 5px auto;
+  position: relative;
+  margin-top: 20px;
+}
+
+.contacts-title {
+  margin: 0;
+  font-size: 1.5em;
+  color: #032038;
+  font-weight: 700;
+  text-align: center;
+}
+
+.contacts-container {
+  width: 400px;
+  height: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 35px;
+  background: var(--greenbarfill);
+  border: 2px solid var(--greenbarstroke);
+  box-shadow: 0 4px 15px rgba(0, 255, 170, 0.4);
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-right: 5px;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--greenbutton);
+  border: 2px solid var(--greenbarstroke);
+  border-radius: 35px;
+  padding: 10px;
+  cursor: pointer;
+  color: #032038;
+  font-weight: 600;
+  text-align: left;
+}
+
+.contact-btn:hover {
+  background: var(--greenbarstroke);
+  color: #fff;
+}
+
+.contact-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.contact-name {
+  flex-grow: 1;
+}
+
+.contact-list::-webkit-scrollbar,
+.chatSpace::-webkit-scrollbar {
+  width: 12px;
+}
+.contact-list::-webkit-scrollbar-track,
+.chatSpace::-webkit-scrollbar-track {
+  background: var(--greenbarfill);
+  border-radius: 35px;
+}
+.contact-list::-webkit-scrollbar-thumb,
+.chatSpace::-webkit-scrollbar-thumb {
+  background: var(--greenbutton);
+  border: 2px solid var(--greenbarstroke);
+  border-radius: 35px;
+}
+.contact-list::-webkit-scrollbar-thumb:hover,
+.chatSpace::-webkit-scrollbar-thumb:hover {
+  background: var(--greenbarstroke);
+}
+
+.chatSpace {
+  width: 400px;
+  height: 500px;
+  flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.message-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.said {
+  background: var(--greenbutton);
+  border: 2px solid var(--greenbarstroke);
+  border-radius: 20px;
+  padding: 8px 12px;
+  color: #032038;
+  font-weight: 500;
+  max-width: 70%;
+  display: inline-block;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+.userName {
+  margin: 0 0 5px 0;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: #032038;
+  text-align: left;
+}
+
+.userImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+}
+
+#talk {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 35px;
+  border: 2px solid var(--greenbarstroke);
+  background: var(--bluetextinput);
+  color: #fff;
+}
+
+#send {
+  background: var(--greenbutton);
+  border: 2px solid var(--greenbarstroke);
+  border-radius: 35px;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #032038;
+  font-weight: 600;
+}
+
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--redbutton);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.2em;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  background: #ff0000;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charlie Chat Room</title>
+  <link rel="stylesheet" href="styleChats.css" />
+  <link rel="stylesheet" href="css/miestilo.css" type="text/css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+ <div class="body_perfil">
+  <div class="contacts-title-box" style="position: relative;">
+    <h2 class="contacts-title">Charlie</h2>
+    <button class="close-btn" onclick="goBack()">✖</button>
+  </div>
+
+  <div class="contacts-container">
+    <div class="chatSpace" id="chatText"></div>
+    <div class="chat-input">
+      <input type="text" id="talk" placeholder="Type a message..." />
+      <button id="send">Send</button>
+    </div>
+  </div>
+ </div>
+
+ <script>
+    function goBack() {
+      window.location.href = "Chats.html";
+    }
+
+    $(document).ready(function() {
+      $("#talk").keypress(function(e){
+        if ((e.keyCode == 13) && ($("#talk").val().trim() != '')){
+          divItem();
+          $('.chatSpace').animate({scrollTop: $('.chatSpace').prop("scrollHeight")}, "slow");
+        }
+      });
+
+      function divItem(){
+        $('#chatText').append(
+          '<div class="message-row">' +
+            '<div class="said">' +
+              '<p class="userName">You</p>' +
+              $("#talk").val() +
+            '</div>' +
+            '<div class="userImg"></div>' +
+          '</div>'
+        );
+        $("#talk").val('');
+      };
+
+      $('#send').click(function(e){
+        if (($("#talk").val().trim() != '')) {
+          divItem();
+          $('.chatSpace').animate({scrollTop: $('.chatSpace').prop("scrollHeight")}, "slow");
+        }
+      });
+    });
+ </script>
+</body>
+</html>

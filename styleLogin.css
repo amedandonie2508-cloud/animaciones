@@ -1,0 +1,169 @@
+:root {
+  --bluebarfill: linear-gradient(to right, #00C5CC, #0071ae);
+  --bluebarstroke: #00ebe7;
+  --bluebutton: #23ffe5; 
+  --pinkbarfill: linear-gradient(to right, #ff2f8d, #9b0081); 
+  --pinkbarstroke: #ff43ad; 
+  --pinkbutton: #ff55cc; 
+  --goldbarfill: linear-gradient(to right, #e7b615, #ff3f3f); 
+  --goldbarstroke: #ffe32d; 
+  --goldbutton: #f6cc3f; 
+  --greenbarfill: linear-gradient(to right, #00cc63, #007a9b); 
+  --greenbarstroke: #00ebad; 
+  --greenbutton: #02ffab; 
+  --bluetextinput: #0b5f70; 
+  --goldtextinput: #753125; 
+  --pinktextinput: #510b49; 
+  --redbutton: #ed2e47; 
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #032038;
+  font-family: 'Poppins', sans-serif;
+}
+
+.driveuplogo {
+  display: flex;
+  justify-content: center;
+}
+
+.driveuplogo .logo {
+  height: auto;
+}
+
+.login-container {
+  max-width: 350px;
+  width: 520px;
+  padding: 30px;
+  border-radius: 35px;
+  background: var(--bluebarfill);
+  border: 2px solid var(--bluebarstroke);
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.4);
+  text-align: center;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.tittle {
+  font-size: 1.2em;
+  background: var(--bluebutton);
+  border: 2px solid var(--bluebarstroke);
+  color: #fff;
+  padding: 12px;
+  border-radius: 35px;
+  width: 60%;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.input-blue {
+  background: var(--bluetextinput);
+  border: 2px solid var(--bluebarstroke);
+  color: #fff;
+  padding: 12px;
+  border-radius: 35px;
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: left;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+.password-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 35px;
+  border-radius: 35px;
+  box-sizing: border-box;
+}
+
+#togglePassword {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+  background: none;
+  border: none;
+  align-items: center;
+}
+
+.forgot {
+  background: var(--bluebutton);
+  border: 2px solid var(--bluebarstroke);
+  color: #ffffff;
+  border-radius: 35px;
+  padding: 6px 0;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.LoginButton {
+  background: var(--bluebutton);
+  border: 2px solid var(--bluebarstroke);
+  color: #ffffff;
+  border-radius: 35px;
+  padding: 8px 0;
+  width: 40%;
+  margin-bottom: 15px;
+} 
+
+.mini {
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.GoogleLogin {
+  background: var(--bluebutton);
+  border: 2px solid var(--bluebarstroke);
+  color: #ffffff;
+  border-radius: 35px;
+  padding: 8px 0;
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.google-icon {
+  height: 18px;
+  width: 18px;
+  display: inline-block;
+}
+
+.back-btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.back-btn button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: var(--bluebutton);
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

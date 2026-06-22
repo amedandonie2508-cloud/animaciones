@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+       <meta charset="UTF-8" />
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <title>Recover Password</title>
+       <link rel="stylesheet" href="style.css" />
+    </head>
+
+
+    <body>
+
+        <section class="pull-to-refresh">
+        <div class="spinner-border" role="status">
+        </div>
+
+</section>
+ <div class="recover-container">
+
+        <img src="img/Drive-Up Logo.png" alt="Drive-Up Logo" class="logo">
+
+        <div class="title-bar">
+            Restaurar Contraseña
+        </div>
+
+        <div class="card-recover">
+
+            <div class="input-group">
+                <label>User Or Email</label>
+                <input type="text" id="userEmail">
+            </div>
+
+            <div class="input-group">
+
+                <div class="label-row">
+                    <label>New Password</label>
+
+                    <button
+                        type="button"
+                        class="eye-btn"
+                        onclick="togglePassword('newPassword', 'newPasswordIcon')">
+
+                        <iconify-icon
+                            id="newPasswordIcon"
+                            icon="carbon:view-off">
+                        </iconify-icon>
+
+                    </button>
+
+                </div>
+
+                <input type="password" id="newPassword">
+
+            </div>
+
+            <div class="input-group">
+
+                <div class="label-row">
+                    <label>Check Password</label>
+
+                    <button
+                        type="button"
+                        class="eye-btn"
+                        onclick="togglePassword('confirmPassword', 'confirmPasswordIcon')">
+
+                        <iconify-icon
+                            id="confirmPasswordIcon"
+                            icon="carbon:view-off">
+                        </iconify-icon>
+
+                    </button>
+
+                </div>
+
+                <input type="password" id="confirmPassword">
+
+            </div>
+
+            <button class="confirm-btn" onclick="window.location.href='Login.html'"> Confirm
+                
+                
+            </button>
+
+            <a href="Login.html" class="back-btn">
+                ←
+            </a>
+
+        </div>
+
+    </div>
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+
+    <script>
+
+        function togglePassword(inputId, iconId) {
+
+            const input = document.getElementById(inputId);
+            const icon = document.getElementById(iconId);
+
+            if (input.type === "password") {
+
+                input.type = "text";
+                icon.setAttribute("icon", "carbon:view");
+
+            } else {
+
+                input.type = "password";
+                icon.setAttribute("icon", "carbon:view-off");
+
+            }
+        }
+
+    </script>
+
+<script>
+
+const pullToRefresh = document.querySelector('.pull-to-refresh');
+let touchstartY = 0;
+document.addEventListener('touchstart', e => {
+  touchstartY = e.touches[0].clientY;
+});
+document.addEventListener('touchmove', e => {
+  const touchY = e.touches[0].clientY;
+  const touchDiff = touchY - touchstartY;
+  if (touchDiff > 0 && window.scrollY === 0) {
+    pullToRefresh.classList.add('seen');
+    e.preventDefault();
+  }
+});
+document.addEventListener('touchend', e => {
+  if (pullToRefresh.classList.contains('seen')) {
+    pullToRefresh.classList.remove('seen');
+    location.reload();
+  }
+});
+
+</script>
+
+<div class="fab d-flex fixed-bottom z-1">
+<div class="row">
+<div class="col justify-content-end">
+<button class="btn btn-primary">
+<i class="fa-solid fa-plus"></i>
+</button>
+</div>
+</div>
+</div>
+
+    </body>
+</html>

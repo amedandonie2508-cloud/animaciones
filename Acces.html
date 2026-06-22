@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Acces</title>
+
+    <link rel="stylesheet" href="css/miestilo.css" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+  </head>
+
+  <body class="body_login">
+    <header></header>
+    <main>
+      <section class="pull-to-refresh">
+        <div class="spinner-border" role="status"></div>
+      </section>
+
+      <section class="logos">
+        <div>
+          <img src="img/Drive-Up Logo 1 (1).png" alt="DriveUp Logo" />
+        </div>
+      </section>
+
+      <div class="card-access">
+        <a href="signup.html"><button class="btn-access">Sign Up</button></a>
+        <a href="login.html"><button class="btn-access">Log In</button></a>
+      </div>
+    </main>
+    <footer></footer>
+
+    <script src="js/bootstrap.bundle.min.js" type="script"></script>
+    <script
+      src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.14/dist/dotlottie-wc.js"
+      type="module"
+    ></script>
+    <script>
+      const pullToRefresh = document.querySelector(".pull-to-refresh");
+      let touchstartY = 0;
+      document.addEventListener("touchstart", (e) => {
+        touchstartY = e.touches[0].clientY;
+      });
+      document.addEventListener("touchmove", (e) => {
+        const touchY = e.touches[0].clientY;
+        const touchDiff = touchY - touchstartY;
+        if (touchDiff > 0 && window.scrollY === 0) {
+          pullToRefresh.classList.add("seen");
+          e.preventDefault();
+        }
+      });
+      document.addEventListener("touchend", (e) => {
+        if (pullToRefresh.classList.contains("seen")) {
+          pullToRefresh.classList.remove("seen");
+          location.reload();
+        }
+      });
+    </script>
+  </body>
+</html>

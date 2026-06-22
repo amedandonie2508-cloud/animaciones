@@ -1,0 +1,436 @@
+:root {
+    --bluebarfill: linear-gradient(to right, #00C5CC, #0071ae);
+    --bluebarstroke: #00ebe7;
+    --bluebutton: #23ffe5; 
+    --pinkbarfill: linear-gradient(to right, #ff2f8d, #9b0081); 
+    --pinkbarstroke: #ff43ad; 
+    --pinkbutton: #ff55cc; 
+    --goldbarfill: linear-gradient(to right, #e7b615, #ff3f3f); 
+    --goldbarstroke: #ffe32d; 
+    --goldbutton: #f6cc3f; 
+    --greenbarfill: linear-gradient(to right, #00cc63, #007a9b); 
+    --greenbarstroke: #00ebad; 
+    --greenbutton: #02ffab; 
+    --bluetextinput: #0b5f70; 
+    --goldtextinput: #753125; 
+    --pinktextinput: #510b49; 
+    --redbutton: #ed2e47; 
+}
+
+
+.logos{
+    
+   
+    justify-content: center;
+    justify-items: center;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    background-color: #032038;
+}
+.card_signup{
+    
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    padding-top: 10px;
+    padding-bottom: 100px;
+}
+
+.body_login {
+    background-color: #032038;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;  
+    font-family: 'Rajdhani', sans-serif;
+    padding: 60px 20px 40px;
+    margin-top: 3vh;
+    overscroll-behavior-y: auto;  
+}
+
+.card-signup {
+    width: 100%;
+    max-width: 340px;
+    background: var(--bluebarfill);
+    border: 5px solid var(--bluebarstroke);
+    border-radius: 36px;
+    padding: 36px 28px 70px;
+    position: relative;
+    
+}
+
+.card-access {
+    width: 100%;
+    max-width: 340px;
+    background: var(--bluebarfill);
+    border: 5px solid var(--bluebarstroke);
+    border-radius: 36px;
+    padding: 28px 28px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 0 auto;
+}
+
+.card-signup::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: 20px; right: 20px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--bluebarstroke), transparent);
+    border-radius: 2px;
+}
+
+
+.field-group {
+    margin-bottom: 18px;
+}
+
+.field-label {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #032038;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+    background-color: var(--bluebarstroke);
+    border: 1.5px solid var(--bluebarstroke);
+    border-radius: 50px;
+    padding: 4px 16px;
+}
+
+.field-input {
+    width: 100%;
+    background-color: rgba(3, 32, 56, 0.6);
+    border: 1.5px solid var(--bluebarstroke);
+    border-radius: 50px;
+    padding: 12px 20px;
+    color: #e0f8ff;
+    font-size: 15px;
+    outline: none;
+}
+
+.field-input::placeholder {
+    color: rgba(200, 240, 255, 0.35);
+}
+
+.field-input:focus {
+    border-color: var(--bluebarstroke);
+    box-shadow: 0 0 14px rgba(0, 235, 231, 0.25);
+}
+
+
+.btn-signup {
+    width: 100%;
+    margin-top: 24px;
+    padding: 13px;
+    background: var(--bluebutton);
+    border: none;
+    border-radius: 50px;
+    color: #032038;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.divider {
+    text-align: center;
+    margin: 14px 0;
+    color: rgba(0, 235, 231, 0.5);
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.btn-google {
+    width: 100%;
+    padding: 12px;
+    background: var(--bluebutton);
+    border: 1.5px solid var(--bluebarstroke);
+    border-radius: 50px;
+    color: #032038;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.google-icon {
+    width: 20px;
+    height: 20px;
+}
+.btn-back {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    background: var(--bluebutton);
+    border: none;
+    border-radius: 50%;
+    color: #032038;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-back svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+
+.btn-access {
+    width: 100%;
+    padding: 13px;
+    background: var(--bluebutton);
+    border: none;
+    border-radius: 50px;
+    color: #032038;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn-access:hover {
+    opacity: 0.9;
+}
+
+
+.logos img {
+    width: 280px;  
+    margin-bottom: 0;
+}
+
+.pull-to-refresh {
+  position:relative;
+  top: -60px;
+  width: 100%;
+  height: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: top 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
+}
+.pull-to-refresh.seen {
+  top: 0 !important; /* Alteracion de posicion */
+  height: 6vh !important; /* Altura de espacio cuando aparece Spinner */
+  transition: height 0.5s ease-in-out; /* Animacion de transicion de la altura modificada */
+}
+.chatspace{
+    height: 700px ;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: right;
+}
+#chatText{
+    display: grid;
+    justify-items: center;
+}
+
+.profile-card-top {
+    width: 160px;
+    background: var(--bluebarfill);
+    border: 5px solid var(--bluebarstroke);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin: 10px auto 0; 
+}
+
+.profile-title {
+    color: var(--bluebarstroke);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.profile-icon {
+    font-size: 60px;
+    color: #e3e7eb;
+}
+
+.profile-name {
+    color: #e3e7eb;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.profile-info-card {
+    width: 100%;
+    max-width: 300px;
+    background: var(--bluebarfill);
+    border: 5px solid var(--bluebarstroke);
+    border-radius: 20px;
+    padding: 24px 28px 50px 28px; 
+    margin: 8px auto 0;
+    position: relative; 
+}
+
+
+.profile-info-list {
+    list-style: disc;
+    padding-left: 16px;
+    color: #e3e7eb;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+.btn-settings {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 32px;
+    background: var(--bluebutton);
+    border: none;
+    border-radius: 50px;
+    color: #032038;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.btn-settings:hover {
+    background: rgba(3, 32, 56, 0.1);
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 340px;
+    background: var(--bluebarfill);
+    border: 3px solid var(--bluebarstroke);
+    border-radius: 12px !important;
+    padding: 14px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bottom-nav a {
+    color: #032038;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+}
+.body_perfil {
+    background-color: #032038;
+    background-image: url('../img/Drive-Up Map.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'Rajdhani', sans-serif;
+    padding: 40px 20px 100px;
+    gap: 12px;
+    position: relative;
+    padding-top: 60px;
+}
+
+.body_perfil::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(3, 32, 56, 0.7);
+    z-index: 0;
+}
+
+.body_perfil > * {
+    position: relative;
+    z-index: 1;
+}
+.blue-bar {
+    background: var(--bluebarfill);
+
+    border: 4px solid var(--bluebarstroke);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 18px rgba(0,0,0,0.35);
+
+    backdrop-filter: blur(4px);
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 340px;
+    height: 60px;
+    background: var(--bluebarfill);
+    border: 3px solid var(--bluebarstroke);
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+}
+
+.bottom-nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #032038;
+}
+
+.bottom-nav iconify-icon {
+
+    color: white;
+
+    font-size: 42px;
+
+    width: 42px;
+    height: 42px;
+}
+.map-container {
+
+    position: relative;
+
+    width: 100vw;
+    height: 100dvh;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 20, 40, 0.45),
+            rgba(0, 20, 40, 0.45)
+        ),
+        url("img/Drive-Up Map.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
